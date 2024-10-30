@@ -1,0 +1,111 @@
+mkdir: cannot create directory ‘/build’: Permission denied
+mkdir: cannot create directory ‘/configs’: Permission denied
+mkdir: cannot create directory ‘/output’: Permission denied
+input_line_69:8:66: warning: 'createIterator' is deprecated: will be removed in ROOT v6.34: begin(), end() and range-based for loops. [-Wdeprecated-declarations]
+         new (ret) (TIterator*) (((const RooAbsCollection*)obj)->createIterator());
+                                                                 ^
+/cvmfs/sft.cern.ch/lcg/releases/ROOT/6.32.02-51ebb/x86_64-el9-gcc13-opt/include/RooAbsCollection.h:256:3: note: 'createIterator' has been explicitly marked deprecated here
+  R__DEPRECATED(6,34, "begin(), end() and range-based for loops.") {
+  ^
+/cvmfs/sft.cern.ch/lcg/releases/ROOT/6.32.02-51ebb/x86_64-el9-gcc13-opt/include/ROOT/RConfig.hxx:497:3: note: expanded from macro 'R__DEPRECATED'
+  _R__JOIN3_(_R__DEPRECATED_,MAJOR,MINOR)("will be removed in ROOT v" #MAJOR "." #MINOR ": " REASON)
+  ^
+/cvmfs/sft.cern.ch/lcg/releases/ROOT/6.32.02-51ebb/x86_64-el9-gcc13-opt/include/ROOT/RConfig.hxx:452:30: note: expanded from macro '_R__JOIN3_'
+#   define _R__JOIN3_(F,X,Y) _NAME3_(F,X,Y)
+                             ^
+/cvmfs/sft.cern.ch/lcg/releases/ROOT/6.32.02-51ebb/x86_64-el9-gcc13-opt/include/ROOT/RConfig.hxx:435:39: note: expanded from macro '_NAME3_'
+#   define _NAME3_(name1,name2,name3) name1##name2##name3
+                                      ^
+<scratch space>:74:1: note: expanded from here
+_R__DEPRECATED_634
+^
+/cvmfs/sft.cern.ch/lcg/releases/ROOT/6.32.02-51ebb/x86_64-el9-gcc13-opt/include/ROOT/RConfig.hxx:481:37: note: expanded from macro '_R__DEPRECATED_634'
+# define _R__DEPRECATED_634(REASON) _R__DEPRECATED_LATER(REASON)
+                                    ^
+/cvmfs/sft.cern.ch/lcg/releases/ROOT/6.32.02-51ebb/x86_64-el9-gcc13-opt/include/ROOT/RConfig.hxx:463:56: note: expanded from macro '_R__DEPRECATED_LATER'
+#   define _R__DEPRECATED_LATER(REASON) __attribute__((deprecated(REASON)))
+                                                       ^
+input_line_69:12:49: warning: 'createIterator' is deprecated: will be removed in ROOT v6.34: begin(), end() and range-based for loops. [-Wdeprecated-declarations]
+         (void)(((const RooAbsCollection*)obj)->createIterator());
+                                                ^
+/cvmfs/sft.cern.ch/lcg/releases/ROOT/6.32.02-51ebb/x86_64-el9-gcc13-opt/include/RooAbsCollection.h:256:3: note: 'createIterator' has been explicitly marked deprecated here
+  R__DEPRECATED(6,34, "begin(), end() and range-based for loops.") {
+  ^
+/cvmfs/sft.cern.ch/lcg/releases/ROOT/6.32.02-51ebb/x86_64-el9-gcc13-opt/include/ROOT/RConfig.hxx:497:3: note: expanded from macro 'R__DEPRECATED'
+  _R__JOIN3_(_R__DEPRECATED_,MAJOR,MINOR)("will be removed in ROOT v" #MAJOR "." #MINOR ": " REASON)
+  ^
+/cvmfs/sft.cern.ch/lcg/releases/ROOT/6.32.02-51ebb/x86_64-el9-gcc13-opt/include/ROOT/RConfig.hxx:452:30: note: expanded from macro '_R__JOIN3_'
+#   define _R__JOIN3_(F,X,Y) _NAME3_(F,X,Y)
+                             ^
+/cvmfs/sft.cern.ch/lcg/releases/ROOT/6.32.02-51ebb/x86_64-el9-gcc13-opt/include/ROOT/RConfig.hxx:435:39: note: expanded from macro '_NAME3_'
+#   define _NAME3_(name1,name2,name3) name1##name2##name3
+                                      ^
+<scratch space>:74:1: note: expanded from here
+_R__DEPRECATED_634
+^
+/cvmfs/sft.cern.ch/lcg/releases/ROOT/6.32.02-51ebb/x86_64-el9-gcc13-opt/include/ROOT/RConfig.hxx:481:37: note: expanded from macro '_R__DEPRECATED_634'
+# define _R__DEPRECATED_634(REASON) _R__DEPRECATED_LATER(REASON)
+                                    ^
+/cvmfs/sft.cern.ch/lcg/releases/ROOT/6.32.02-51ebb/x86_64-el9-gcc13-opt/include/ROOT/RConfig.hxx:463:56: note: expanded from macro '_R__DEPRECATED_LATER'
+#   define _R__DEPRECATED_LATER(REASON) __attribute__((deprecated(REASON)))
+                                                       ^
+input_line_69:18:66: warning: 'createIterator' is deprecated: will be removed in ROOT v6.34: begin(), end() and range-based for loops. [-Wdeprecated-declarations]
+         new (ret) (TIterator*) (((const RooAbsCollection*)obj)->createIterator(*(bool*)args[0]));
+                                                                 ^
+/cvmfs/sft.cern.ch/lcg/releases/ROOT/6.32.02-51ebb/x86_64-el9-gcc13-opt/include/RooAbsCollection.h:256:3: note: 'createIterator' has been explicitly marked deprecated here
+  R__DEPRECATED(6,34, "begin(), end() and range-based for loops.") {
+  ^
+/cvmfs/sft.cern.ch/lcg/releases/ROOT/6.32.02-51ebb/x86_64-el9-gcc13-opt/include/ROOT/RConfig.hxx:497:3: note: expanded from macro 'R__DEPRECATED'
+  _R__JOIN3_(_R__DEPRECATED_,MAJOR,MINOR)("will be removed in ROOT v" #MAJOR "." #MINOR ": " REASON)
+  ^
+/cvmfs/sft.cern.ch/lcg/releases/ROOT/6.32.02-51ebb/x86_64-el9-gcc13-opt/include/ROOT/RConfig.hxx:452:30: note: expanded from macro '_R__JOIN3_'
+#   define _R__JOIN3_(F,X,Y) _NAME3_(F,X,Y)
+                             ^
+/cvmfs/sft.cern.ch/lcg/releases/ROOT/6.32.02-51ebb/x86_64-el9-gcc13-opt/include/ROOT/RConfig.hxx:435:39: note: expanded from macro '_NAME3_'
+#   define _NAME3_(name1,name2,name3) name1##name2##name3
+                                      ^
+<scratch space>:74:1: note: expanded from here
+_R__DEPRECATED_634
+^
+/cvmfs/sft.cern.ch/lcg/releases/ROOT/6.32.02-51ebb/x86_64-el9-gcc13-opt/include/ROOT/RConfig.hxx:481:37: note: expanded from macro '_R__DEPRECATED_634'
+# define _R__DEPRECATED_634(REASON) _R__DEPRECATED_LATER(REASON)
+                                    ^
+/cvmfs/sft.cern.ch/lcg/releases/ROOT/6.32.02-51ebb/x86_64-el9-gcc13-opt/include/ROOT/RConfig.hxx:463:56: note: expanded from macro '_R__DEPRECATED_LATER'
+#   define _R__DEPRECATED_LATER(REASON) __attribute__((deprecated(REASON)))
+                                                       ^
+input_line_69:22:49: warning: 'createIterator' is deprecated: will be removed in ROOT v6.34: begin(), end() and range-based for loops. [-Wdeprecated-declarations]
+         (void)(((const RooAbsCollection*)obj)->createIterator(*(bool*)args[0]));
+                                                ^
+/cvmfs/sft.cern.ch/lcg/releases/ROOT/6.32.02-51ebb/x86_64-el9-gcc13-opt/include/RooAbsCollection.h:256:3: note: 'createIterator' has been explicitly marked deprecated here
+  R__DEPRECATED(6,34, "begin(), end() and range-based for loops.") {
+  ^
+/cvmfs/sft.cern.ch/lcg/releases/ROOT/6.32.02-51ebb/x86_64-el9-gcc13-opt/include/ROOT/RConfig.hxx:497:3: note: expanded from macro 'R__DEPRECATED'
+  _R__JOIN3_(_R__DEPRECATED_,MAJOR,MINOR)("will be removed in ROOT v" #MAJOR "." #MINOR ": " REASON)
+  ^
+/cvmfs/sft.cern.ch/lcg/releases/ROOT/6.32.02-51ebb/x86_64-el9-gcc13-opt/include/ROOT/RConfig.hxx:452:30: note: expanded from macro '_R__JOIN3_'
+#   define _R__JOIN3_(F,X,Y) _NAME3_(F,X,Y)
+                             ^
+/cvmfs/sft.cern.ch/lcg/releases/ROOT/6.32.02-51ebb/x86_64-el9-gcc13-opt/include/ROOT/RConfig.hxx:435:39: note: expanded from macro '_NAME3_'
+#   define _NAME3_(name1,name2,name3) name1##name2##name3
+                                      ^
+<scratch space>:74:1: note: expanded from here
+_R__DEPRECATED_634
+^
+/cvmfs/sft.cern.ch/lcg/releases/ROOT/6.32.02-51ebb/x86_64-el9-gcc13-opt/include/ROOT/RConfig.hxx:481:37: note: expanded from macro '_R__DEPRECATED_634'
+# define _R__DEPRECATED_634(REASON) _R__DEPRECATED_LATER(REASON)
+                                    ^
+/cvmfs/sft.cern.ch/lcg/releases/ROOT/6.32.02-51ebb/x86_64-el9-gcc13-opt/include/ROOT/RConfig.hxx:463:56: note: expanded from macro '_R__DEPRECATED_LATER'
+#   define _R__DEPRECATED_LATER(REASON) __attribute__((deprecated(REASON)))
+                                                       ^
+hadd could not validate argument "test_out_2mu_den100_subjobs400_strat22_eps001_NewData_newbug/Data/LikelihoodLandscape_out_*.root" as input file 
+Traceback (most recent call last):
+  File "/storage/agrp/annai/Hc_Yukawa_Analysis/NPs/New/WSMaker/scripts/runLikelihoodLandscape.py", line 333, in <module>
+    RunLikelihoodLandscape(infile_path = args["infile_path"],
+  File "/storage/agrp/annai/Hc_Yukawa_Analysis/NPs/New/WSMaker/scripts/runLikelihoodLandscape.py", line 275, in RunLikelihoodLandscape
+    subprocess.check_output(["hadd", mergefile_path, f"{outputdir}/LikelihoodLandscape_out_*.root"])
+  File "/cvmfs/sft.cern.ch/lcg/releases/Python/3.11.9-2924c/x86_64-el9-gcc13-opt/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cvmfs/sft.cern.ch/lcg/releases/Python/3.11.9-2924c/x86_64-el9-gcc13-opt/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['hadd', 'test_out_2mu_den100_subjobs400_strat22_eps001_NewData_newbug/Data/LikelihoodLandscape_out.root', 'test_out_2mu_den100_subjobs400_strat22_eps001_NewData_newbug/Data/LikelihoodLandscape_out_*.root']' returned non-zero exit status 1.

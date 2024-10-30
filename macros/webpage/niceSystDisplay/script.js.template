@@ -1,0 +1,159 @@
+function handleCheckboxClick() {
+  
+  checkAndSetMobile();
+  
+  var msg = document.getElementById("message");
+  var imgs = document.getElementsByClassName("plot");
+  var checked_regs = false;
+  var checked_smps = false;
+  var checked_systs = false;
+  var nChecked_regs = 0;
+  var nChecked_smps = 0;
+  var nDisplayed = 0;
+    for(iregs=0; iregs<class_regs.length; ++iregs) {
+	for(ismps=0; ismps<class_smps.length; ++ismps) {
+	    for(isysts=0; isysts<class_systs.length; ++isysts) {
+		var imgs_sel = document.getElementsByClassName("plot " + class_regs[iregs] + " " + class_smps[ismps] + " " + class_systs[isysts] );
+		checked_regs     = document.getElementsByClassName("cbox "+class_regs[iregs])[0].checked;
+		checked_smps = document.getElementsByClassName("cbox "+class_smps[ismps])[0].checked;
+		checked_systs    = document.getElementsByClassName("cbox "+class_systs[isysts])[0].checked;
+		if (checked_regs && checked_smps && checked_systs) {
+		    for (iimg=0; iimg<imgs_sel.length; ++iimg) {
+			imgs_sel[iimg].style.display="inline";
+			++nDisplayed;
+		    }
+		} else {
+		    for (iimg=0; iimg<imgs_sel.length; ++iimg) {
+			imgs_sel[iimg].style.display="none";
+		    }
+		}
+	    }
+	    if (iregs==0 && ismps>0) ++nChecked_smps;
+	}
+	if (iregs>0) ++nChecked_regs;
+    }
+    if (nChecked_regs==0) msg.innerHTML="Please select at least one regs";
+    else if (nChecked_smps==0) msg.innerHTML="Please select at least one smps";
+}
+
+function handleButtonClick(butt){
+    var select = false;
+    for(i=0;i<class_regs.length;++i){
+        if(butt.id == "selectAllRegs"){
+            document.getElementsByClassName("cbox "+class_regs[i])[0].checked = true;
+        }
+        else if(butt.id == "selectNoRegs"){
+            document.getElementsByClassName("cbox "+class_regs[i])[0].checked = false;
+        }     
+    }
+    for(i=0;i<class_smps.length;++i){
+        if(butt.id == "selectAllSmps"){
+            document.getElementsByClassName("cbox "+class_smps[i])[0].checked = true;
+        }
+        else if(butt.id == "selectNoSmps"){
+            document.getElementsByClassName("cbox "+class_smps[i])[0].checked = false;
+        }     
+    }
+    for(i=0;i<class_systs.length;++i){
+        if(butt.id == "selectAllSyst"){
+            document.getElementsByClassName("cbox "+class_systs[i])[0].checked = true;
+        }
+        else if(butt.id == "selectNoSyst"){
+            document.getElementsByClassName("cbox "+class_systs[i])[0].checked = false;
+        }     
+    }
+    handleCheckboxClick();
+}
+
+function checkAndSetMobile(){
+  
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        is_mobile = true;
+        var metaTag=document.createElement('meta');
+        metaTag.name = "viewport";
+        metaTag.content = "width=520px, user-scalable=no";
+        document.getElementsByTagName('head')[0].appendChild(metaTag);
+        
+        var pagewr = document.getElementById("pagewrap");
+        pagewr.style.maxWidth="100%";
+        pagewr.style.maxHeight="calc(94vh - 430px)";
+        pagewr.style.height="calc(100vh - 435px)";
+        pagewr.style.overflowX="scroll";
+        pagewr.style.overflowY="hidden";
+        pagewr.style.whiteSpace="nowrap";
+        pagewr.style.msScrollSnapPointsX="repeat(100vw)";
+        pagewr.style.msScrollSnapType="mandatory";
+        pagewr.style.paddingTop="calc(6vh + 435px)"
+        
+        var selects = document.getElementsByClassName("plot");
+        if(screen.width < screen.height){
+          for(var i =0, il = selects.length;i<il;i++){
+            selects[i].style.width="100vw";
+            selects[i].style.height="auto";
+            selects[i].style.margin="-1.55px";
+          }
+          pagewr.style.msScrollSnapType="mandatory";
+        }
+        else{
+          for(var i =0, il = selects.length;i<il;i++){            
+            selects[i].style.height="calc(94vh - 430px)";
+            selects[i].style.width="auto";            
+            selects[i].style.margin="-1.55px";
+          }
+          pagewr.style.msScrollSnapType="none";
+        }
+    }
+}
+
+function hideMenuBar(){
+  var header = document.getElementById("hideoverflow");
+  var header2 = document.getElementById("header");
+  var wrap = document.getElementById("pagewrap");
+  var butt = document.getElementById("hideMenuButton");
+  // var butt = document.getElementById("hidewrapper");
+  
+  
+  if(menu_show){
+    header.style.display="none";
+    header.style.visibility="hidden";
+    header2.style.height="0";
+    wrap.style.paddingTop="0";
+    butt.style.marginTop="5pt";
+    wrap.style.maxHeight="94vh";
+    wrap.style.height="100vh"; 
+    if(is_mobile && (screen.width > screen.height)){
+      var selects = document.getElementsByClassName("plot");
+      for(var i =0, il = selects.length;i<il;i++){            
+        selects[i].style.height="calc(94vh)";
+      }
+    }
+      
+    menu_show=false;
+  }
+  else{
+    header.style.display="block";
+    header.style.visibility="visible";
+    header2.style.height="430px";  
+    butt.style.marginTop="0";    
+    // butt.style.marginTop="-0.85ex"; 
+    wrap.style.paddingTop="430px";
+    wrap.style.maxHeight="calc(94vh - 430px)";
+    wrap.style.height="calc(100vh - 435px)"; 
+    if(is_mobile && (screen.width > screen.height)){
+      var selects = document.getElementsByClassName("plot");
+      for(var i =0, il = selects.length;i<il;i++){            
+        selects[i].style.height="calc(94vh - 430px)";
+      }
+    }
+        
+    menu_show=true;
+  } 
+}
+
+function onOrientationChange(){
+  checkAndSetMobile();
+  // handleCheckboxClick();
+  // handleCheckboxClick();  
+}
+
+window.addEventListener('orientationchange', onOrientationChange());

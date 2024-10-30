@@ -1,0 +1,37 @@
+#filterbar
+{
+  position: fixed;
+  top: 2px;
+}
+
+#images
+{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: rows;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#images article
+{
+  width: 45%;
+  min-width: 450px;
+  word-wrap: break-word;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+article img
+{
+  width: 400px;
+  height: 300px;
+}
+
+nav
+{
+  margin-top: 50px;
+}
