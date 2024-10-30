@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 WSMaker: the HSG5 package for statistical analysis {#mainpage}
 ==================================================
@@ -442,3 +443,4 @@ These are the mu summary plots, and you have to put the numbers in by hand.  Arg
 
 * Same as the above, but generate a tex-style table instead: `scripts/make1DLimitsSummaryTable.py`
 
+=======
